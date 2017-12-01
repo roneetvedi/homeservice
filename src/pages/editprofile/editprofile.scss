@@ -1,0 +1,66 @@
+page-editprofile {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal;}
+	.back-button{color:#02a499;}
+
+
+	.edtbox {
+		width: 372px;
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+
+	.edtprfl {
+		position: relative;
+		overflow: hidden;
+		width: 26%;
+	
+		margin: 0 auto;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+
+		.cam{
+			position: absolute;
+			bottom:-1px;
+			right: 129px;
+		
+
+		}
+	}
+
+.profilebox{
+
+ion-list{
+
+	ion-item{
+		padding: 0;
+		
+
+		.input-cover{ position: unset; }
+		.input-wrapper{
+	}
+		
+	}
+
+
+}
+
+}
+
+
+}
+
+
+
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner
+{
+	
+	box-shadow:unset;
+	border-bottom: unset;
+	border-bottom: 2px solid #02a499;
+}

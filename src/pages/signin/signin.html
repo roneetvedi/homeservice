@@ -1,0 +1,68 @@
+<ion-content>
+	<ion-slides pager>
+		<ion-slide>
+			<img src="assets/imgs/slide-one.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-two.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-three.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-four.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-five.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+	</ion-slides><!-- Slide End Here -->
+	<div class="page-bottom" padding>
+		<div class="page-head">
+			<h2>Sign In</h2>
+		</div>
+		<div class="form-sec">
+			<form #heroForm="ngForm"novalidate class="signup_form">
+				<ion-list>
+					
+					<ion-item>
+						<ion-label floating>Email</ion-label>
+						<ion-input  [(ngModel)]="data.email" name="email" type="email" id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$' #email="ngModel"></ion-input>
+    
+						<div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+						<div [hidden]="!email.errors.required" class="alert alert-danger">
+							Email is required
+							</div>
+							<div [hidden]="!email.errors.pattern" class="alert alert-danger">
+							In-valid email
+							</div>
+						</div>
+					</ion-item>
+
+					<ion-item>
+						<ion-label floating>Password</ion-label>
+						<ion-input  [(ngModel)]="data.password" name="password" type="password" id="password" required minlength="6" maxlength="50"  #password="ngModel"></ion-input>
+    
+						<div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+						<div [hidden]="!password.errors.required" class="alert alert-danger">
+							Password is required
+							</div>
+						</div>	
+					</ion-item>
+					
+					<ion-item>
+						<button ion-button (click)="to_signup()">Create an account</button>
+						<button ion-button class="fl" (click)="forgotpassword()">Forgot Password</button>
+					</ion-item>
+				</ion-list>
+				<button ion-button block type="submit" color="theme" [disabled]="!heroForm.form.valid" (click)="signIn(heroForm)">Sign In</button>
+			</form>
+		</div>
+		<div class="bottom-sec">
+			<h5><span>Or Sign In With</span></h5>
+			<div class="button-sec">
+				<button ion-button (click)="facebookLogin()"><ion-icon name="logo-facebook"></ion-icon> Facebook</button>
+				<button ion-button (click)="google_plus()"><ion-icon name="logo-googleplus"></ion-icon> Google</button>
+			</div>
+		</div>
+	</div>
+</ion-content>

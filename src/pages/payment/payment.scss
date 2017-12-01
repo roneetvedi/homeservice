@@ -1,0 +1,34 @@
+page-payment {
+
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal;}
+	.back-button{color:#02a499;}
+
+	.payment{
+		h1{color: #8d8d8d;
+   			 margin: 0;
+   			    font-size: 15px !important; }
+
+		ion-item{
+		ion-label#lbl-45{color:#02a499;}
+			padding: 0px;
+			.input-cover{ position: unset; }
+
+			ion-label{
+			margin: 0;
+    		font-size: 15px;
+    		color: #8d8d8d;}
+   
+			}
+		}
+
+
+	}
+
+	.item-input-has-focus .label-md[stacked], .input-has-focus .label-md[stacked], .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating]{
+		color: #02a499;
+	}
+
+
+
+

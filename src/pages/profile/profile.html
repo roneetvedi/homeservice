@@ -1,0 +1,57 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="theme">
+ 
+ <ion-toolbar>
+    
+    <ion-title text-center >PROFILE </ion-title>
+   <ion-buttons end>
+      <button ion-button icon-only (click)="editprofile()">
+       <label >EDIT</label>
+      </button>
+      </ion-buttons>
+        
+      
+    
+    
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content >
+<div class="profilebx">
+ 	<div class="profilepic">
+       <img src="{{img}}"/>
+     </div>
+      <h1>{{name}}</h1>
+      <p>{{contact}}</p>
+</div>
+
+<ion-list>
+  <ion-item (click) = "aboutus()"> 
+      ABOUT US 
+  </ion-item>
+   <ion-item (click)="terms()"> 
+      TERMS OF USE
+  </ion-item>
+  <ion-item (click)="policy()"> 
+      PRIVACY POLICY
+  </ion-item>
+  <div class="upload_img" *ngIf="this.fbdata == null">
+        <ion-item *ngIf="this.googledata == null"> 
+            <div (click) = "changepwd()"  >  CHANGE PASSWORD </div>
+        </ion-item>
+  </div>
+  <ion-item (click) = "logouted()"> 
+      LOGOUT
+  </ion-item>
+</ion-list>
+
+
+</ion-content>

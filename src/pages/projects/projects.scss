@@ -1,0 +1,33 @@
+page-projects {
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal;}
+	.back-button{color:#02a499;}
+
+	.projects{
+
+	h1{ color: #8d8d8d; font-size: 19px;font-weight: normal;}
+
+	.box{
+		ion-list{    margin-bottom: 10px;
+
+		ion-item{
+			    border-bottom: 2px solid #cccccc !important;
+			    padding-bottom: 8px;
+			        padding-left: 0;
+				.item-inner{
+					ion-label{margin: 0;}
+				}
+		}
+
+		}
+		
+		h2{color: #8d8d8d; font-size: 16px;margin: 0px 0 5px 0;text-transform: capitalize;}
+		h3{
+			    margin: 3px 0;
+			span{float: right; }
+		}
+		h3,p{color: #8dbcb7;margin: 0;}
+	}
+
+	}
+
+}

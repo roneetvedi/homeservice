@@ -1,0 +1,44 @@
+page-viewdetail {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal;}
+	.back-button{color:#02a499;}
+
+	.detail{
+
+		h2{
+				font-size: 17px;
+    color: #929292;
+    font-weight: normal;
+			}
+
+		.form-sec{
+			width: 100%;
+			float: left;
+			ion-label{
+				width: 100%;
+    			float: left;
+    			margin: 0px;
+    			margin-bottom: 20px;
+    			padding-left: 130px;
+    			position: relative;
+    			text-overflow: unset;
+    			 overflow: unset;
+    			 white-space: unset;
+    			 	font-size: 14px;
+    			span{
+    				font-size: 14px;
+    				font-weight: bold;
+    				position: absolute;
+    				left: 0;
+    			}
+			}
+		}
+
+
+
+
+
+
+	}
+
+}

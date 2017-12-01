@@ -1,0 +1,88 @@
+{
+  "name": "Home-Service",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.4.4",
+    "@angular/compiler": "4.4.4",
+    "@angular/compiler-cli": "4.4.4",
+    "@angular/core": "4.4.4",
+    "@angular/forms": "4.4.4",
+    "@angular/http": "4.4.4",
+    "@angular/platform-browser": "4.4.4",
+    "@angular/platform-browser-dynamic": "4.4.4",
+    "@ionic-native/camera": "^4.4.2",
+    "@ionic-native/core": "4.3.2",
+    "@ionic-native/facebook": "^4.4.2",
+    "@ionic-native/firebase": "^4.4.2",
+    "@ionic-native/geolocation": "^4.3.3",
+    "@ionic-native/google-plus": "^4.4.2",
+    "@ionic-native/native-geocoder": "^4.3.3",
+    "@ionic-native/splash-screen": "4.3.2",
+    "@ionic-native/status-bar": "4.3.2",
+    "@ionic-native/stripe": "^4.4.0",
+    "@ionic/storage": "2.0.1",
+    "angularfire2": "^2.0.0-beta.2",
+    "cordova-android": "6.3.0",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-firebase": "^0.1.24",
+    "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-googleplus": "^5.1.1",
+    "cordova-plugin-ionic-webview": "^1.1.11",
+    "cordova-plugin-nativegeocoder": "^2.0.4",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-stripe": "^1.5.3",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "firebase": "^4.6.2",
+    "ionic-angular": "3.8.0",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionicons": "3.0.0",
+    "rxjs": "5.4.3",
+    "splash": "^0.2.1",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.18"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "3.0.1",
+    "@types/googlemaps": "^3.29.2",
+    "typescript": "2.3.4"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-facebook4": {
+        "APP_ID": "130283147733114",
+        "APP_NAME": "Home Service"
+      },
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "cordova-plugin-nativegeocoder": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-stripe": {},
+      "cordova-plugin-firebase": {},
+      "cordova-plugin-compat": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.795241965174-ie2q7q13q634k536t4iua2je7pct20cn"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

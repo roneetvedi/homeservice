@@ -1,0 +1,40 @@
+<!--
+  Generated template for the LocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>LOGO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form #heroForm="ngForm"novalidate class="signup_form">
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Search Location</ion-label>
+    <ion-input class="location_sss" type="text" name="query" [(ngModel)]="autocomplete.query" (input)="updateSearch()" #query="ngModel" required></ion-input>
+    <!--#query="ngModel"-->
+
+    
+  </ion-item>
+<ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">{{ item.description }} </ion-item>
+  
+
+</ion-list>
+
+
+<button ion-button block round type="submit" color="theme" class="btns" [disabled]="!heroForm.form.valid" (click)="search(heroForm)">SEARCH</button>
+<button ion-button block round class="current btns" (click)="getCurrentLocation()">USE MY CURRENT LOCATION</button>
+
+</form>
+
+
+
+</ion-content>

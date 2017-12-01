@@ -1,0 +1,105 @@
+page-serviceproviderlist {
+    .toolbar-title {
+        color: #02a499;
+        font-size: 15px !important;
+        font-weight: normal;
+    }
+    .back-button {
+        color: #02a499;
+    }
+    .chklist {
+        p {
+            font-size: 16px;
+        }
+        .list-outer {
+            width: 100%;
+            float: left;
+            ion-list {
+                ion-item {
+                    ion-radio {
+                        margin: 0;
+                    }
+                    padding: 0;
+                    .item-inner {
+                        padding: 0;
+                        .input-wrapper {
+                            ion-label {
+                                display: inline-block;
+                                overflow: unset !important;
+                                .user-avatar {
+                                    width: 22%;
+                                    float: left;
+                                    /* border-radius: 50%; */
+                                }
+                                .user-details {
+                                    float: left;
+                                 width: 60%;
+                                margin-top: 20px;
+                                margin-left: 10px;
+                                    h2 {
+                                        font-size: 14px;
+                                        margin: 0;
+                                        color: #000;
+                                    }
+                                    p {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                            /*user-avatar*/
+                        }
+                        /* input wraper*/
+                    }
+                    /* item inner*/
+                }
+                /* item*/
+                
+                float: left;
+                margin: 0;
+                ion-radio {
+                    .radio-icon {
+                        border-color: #02a499;
+                        .radio-inner {
+                            background-color: #02a499;
+                        }
+                    }
+                }
+            }
+            /* xhek radio*/
+            
+            .view {
+                width: 36px;
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+                color: #02a499;
+            }
+        }
+        /* list outer*/
+    }
+    /* chk list*/
+    
+    p {
+        margin: 0;
+    }
+    ion-item {
+        padding: 0;
+        border-bottom: none !important;
+    }
+    .item-inner {
+        border-bottom: none !important;
+        ion-label {
+            margin: 3px 8px 3px 0 !important;
+            font-size: 15px;
+            span {
+                float: right;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.item-md .radio-md[item-left],
+.item-md .radio-md[item-start] {
+    margin: 11px 11px 12px 4px;
+}

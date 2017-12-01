@@ -1,0 +1,27 @@
+page-location {
+
+	.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal;}
+	.back-button{color:#02a499;}
+
+	.current{
+		background-color: #666666;
+	}
+	.btns{
+	color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+
+	}
+	form{
+
+	.item {
+	padding: 0 !important;
+	}
+	}
+
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{
+
+	box-shadow: none;
+	border-bottom-color: #02a499;
+}

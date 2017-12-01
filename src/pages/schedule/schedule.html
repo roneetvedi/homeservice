@@ -1,0 +1,154 @@
+<!--
+  Generated template for the SchedulePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SCHEDULE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form #heroForm="ngForm"novalidate class="inputbox">
+<div class="box1">
+	<h1>Location of Service</h1>
+	<h2>{{useraddress.address}} <span (click) = "goToAddress()">change</span></h2>
+	
+</div>
+
+<div class="box2">
+
+<h1>Date</h1>
+
+<ion-item>
+  
+  <ion-datetime placeholder="DD/MM/YYYY" displayFormat="MM/DD/YYYY" [(ngModel)]="data.sdate" name="sdate" id="sdate" required #sdate="ngModel"></ion-datetime>
+</ion-item>
+
+</div>
+
+<div class="box3">
+
+<h1>Time</h1>
+
+
+<ion-grid>
+<ion-list radio-group [(ngModel)]="data.stime" name="stime" id="stime" required #stime="ngModel">
+  <ion-row>
+    <ion-col col-4>
+    	<div class="time">
+    		
+    		 <ion-item>
+    		<ion-radio value="9-10"></ion-radio>
+    		</ion-item>
+    		
+    		<span>9-10 AM</span>
+    	</div>
+    </ion-col>
+    <ion-col col-4>
+    <div class="time">
+    		
+    		<ion-item>
+    		<ion-radio value="10-11"  ></ion-radio>
+    		</ion-item>
+    		
+    		<span>10-11 AM</span>
+    	</div>
+    </ion-col>
+     <ion-col col-4>
+      <div class="time">
+    		
+  			<ion-item>
+    		<ion-radio value="11-12"  ></ion-radio>
+    		</ion-item>
+    		
+    		<span>11-12 AM</span>
+    	</div>
+    </ion-col>
+  </ion-row>
+
+
+
+   <ion-row>
+    <ion-col col-4>
+    	<div class="time">
+    	
+  			<ion-item>
+    		<ion-radio value="12-13"  ></ion-radio>
+    		</ion-item>
+    		
+    		<span>12-1 PM</span>
+    	</div>
+    </ion-col>
+    <ion-col col-4>
+    <div class="time">
+  
+  			<ion-item>
+    		<ion-radio value="13-14" ></ion-radio>
+    		</ion-item>
+    		
+    		<span>1-2 PM</span>
+    	</div>
+    </ion-col>
+     <ion-col col-4>
+      <div class="time">
+     
+  			<ion-item>
+    		<ion-radio  value="14-15"></ion-radio>
+    		</ion-item>
+    		
+    		<span>2-3 PM</span>   			
+    	</div>
+    </ion-col>
+  </ion-row>
+
+
+   <ion-row>
+    <ion-col col-4>
+    	<div class="time">
+    
+  			<ion-item>
+    		<ion-radio value="15-16"  ></ion-radio>
+    		</ion-item>
+ 
+    		<span>2-3 PM</span>
+
+    	</div>
+    </ion-col>
+    <ion-col col-4>
+    <div class="time">
+    		
+  			<ion-item>
+    		<ion-radio value="16-17"  ></ion-radio>
+    		</ion-item>
+    		
+    		<span>4-5 PM</span>
+    	</div>
+    </ion-col>
+     <ion-col col-4>
+      <div class="time">
+    		
+  			<ion-item>
+    		<ion-radio value="17-18"  ></ion-radio>
+    		</ion-item>
+    		
+    		<span>5-6 PM</span>
+    	</div>
+    </ion-col>
+  </ion-row>
+  </ion-list>
+</ion-grid>
+
+
+</div>
+
+
+<button ion-button block round type="submit" color="theme"  (click)="serviceproviderlist(heroForm)">NEXT</button>
+</form>
+
+</ion-content>

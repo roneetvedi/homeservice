@@ -1,0 +1,28 @@
+page-services {
+
+.toolbar-title{color:#02a499;}
+.back-button{color:#02a499;}
+.box{
+
+	h2{color:#8d8d8d; font-weight: normal;}
+	ion-item{border-bottom: 2px solid #02a499 !important;padding: 0;}
+	}
+
+.box1{
+
+	&:last-child ion-item {
+    border: none !important;
+	}
+	
+	 h2{color:#8d8d8d; font-weight: normal;}
+	 ion-item{border-bottom: 2px solid #cccccc !important;padding: 0;}
+	}
+	
+
+     
+
+}
+
+.list-ios > .item-block:first-child {
+    border-top: none;
+}

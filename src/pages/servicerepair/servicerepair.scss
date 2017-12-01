@@ -1,0 +1,76 @@
+page-servicerepair {
+
+	.toolbar-background{
+		
+		
+	}
+	
+	ion-header {
+    z-index: 1;
+}
+	
+.toolbar-title{font-size: 15px !important; color: #02a499;font-weight: normal; text-transform: uppercase; }
+.back-button{color:#02a499;}
+
+	/*.AC{
+		margin-bottom: 15px;
+		.heading{
+    	color: #00857c;
+    	font-size: 18px;
+    	text-align: left;
+    	font-weight: normal;}
+		.imgbx{width: 15%;float: left;margin: 6px 0 0 0;}
+		.txtbx{width: 80%; float: left;    padding-left: 5px;
+			h1{
+				color: #8d8d8d;
+				font-size: 11px;
+				margin: 4px 0px;
+			}
+			p{
+				font-size: 12px;
+				margin: 5px 0px;
+			}
+		}
+	}
+
+	.box{
+		width: 100%;
+		float: left;
+		margin: 14px 0;
+		h1{
+			color: #8d8d8d;
+			font-size: 20px;
+		}
+		p{
+			margin: 0;
+			color: #000;
+			font-size: 13px;
+			line-height: 24px;
+		}
+		}*/
+
+		.chklist{
+		p{margin: 0;}
+		ion-item{padding: 0;
+		border-bottom: none !important;
+		ion-checkbox{
+			margin: 0px 6px 0px 4px !important;
+			.checkbox-icon{
+				border-radius: unset !important;
+			}
+		}
+
+		}
+
+		.item-inner{
+			border-bottom: none !important;
+			ion-label{ margin: 3px 8px 3px 0 !important;
+				    font-size: 15px;
+			span{float: right;
+    			font-size: 14px;
+    			font-weight: bold;}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ServicerepairPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{subcat?.name}}</ion-title>
+
+  
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  >
+
+<div class="imgbx">
+<img src="/assets/imgs/ac.jpg"/>
+</div>
+
+
+<form #heroForm="ngForm"novalidate class="chklist" padding>
+<ion-list>
+<p>What type AC do you have? and what type service you want?</p>
+   <ion-item *ngFor="let service of services">
+
+        
+       <ion-label>
+                        {{service.Service.name}}
+                   </ion-label>
+                     <ion-checkbox (ionChange)="updateCheckedOptions(service.Service, $event.checked)"></ion-checkbox>
+  
+
+     
+   </ion-item>
+ </ion-list>
+<button ion-button block round type="submit" color="theme" (click)="addToCart()">Next</button>
+</form>
+
+
+
+</ion-content>

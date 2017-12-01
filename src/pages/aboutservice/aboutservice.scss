@@ -1,0 +1,56 @@
+page-aboutservice {
+
+ion-title{
+
+	.toolbar-title{color:#02a499;   overflow: unset; text-overflow: unset;
+	font-size: 15px !important; font-weight: normal; }
+
+}
+
+	
+	.back-button{color:#02a499;}
+
+
+
+
+	.chklist{
+		p{margin: 0;}
+		ion-item{padding: 0;
+		border-bottom: none !important;
+		ion-checkbox{
+			margin: 0px 6px 0px 4px !important;
+			.checkbox-icon{
+				border-radius: unset !important;
+			}
+		}
+
+		}
+
+		.item-inner{
+			border-bottom: none !important;
+			ion-label{ margin: 3px 8px 3px 0 !important;
+				    font-size: 15px;
+			span{float: right;
+    			font-size: 14px;
+    			font-weight: bold;}
+			}
+		}
+	}
+
+
+	
+
+}
+
+.checkbox-md .checkbox-checked {
+    border-color: #02a499;;
+    background-color: #02a499;;
+}
+.checkbox-ios .checkbox-checked {
+    border-color: #02a499;;
+    background-color: #02a499;;
+}
+.checkbox-ios .checkbox-icon {
+     border-radius: unset; 
+   
+}

@@ -1,0 +1,65 @@
+<!--
+  Generated template for the ProjectsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PROJECTS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="projects">
+<h1>History</h1>
+
+<div class="box" *ngFor="let list of orderlist">
+<ion-list> 
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/service1.jpg">
+    </ion-avatar>
+    <h2>Ac service and repair</h2>
+    <h3>{{list.Order.schedule_date}}<span>${{list.Order.amount}}</span></h3>
+    <p>5:28 PM</p>
+  </ion-item>
+</ion-list>
+</div>
+
+<div class="box">
+<ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/service1.jpg">
+    </ion-avatar>
+    <h2>Ac service and repair</h2>
+    <h3>10/25/2017 <span>$30.00</span></h3>
+    <p>5:28 PM</p>
+  </ion-item>
+</ion-list>
+</div>
+
+<div class="box">
+<ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/service1.jpg">
+    </ion-avatar>
+    <h2>Ac service and repair</h2>
+    <h3>10/25/2017 <span>$30.00</span></h3>
+    <p>5:28 PM</p>
+  </ion-item>
+</ion-list>
+</div>
+
+
+
+	
+</div>
+
+</ion-content>

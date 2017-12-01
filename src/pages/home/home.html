@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar color="theme" hideBackButton padding class="pading_zro">
+  
+
+   <ion-buttons class="box" >
+     <form #heroForm="ngForm" novalidate class="signup_form"> 
+      <!-- <form #heroForm="ngForm" > -->
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4>
+      <div class="heading">
+        <h1>Locality</h1>
+      </div>
+    </ion-col>
+
+    <ion-col col-6>
+                <div class="txt_hldr">
+              <ion-input type="text" placeholder="Location" class="mrgn_txt" name="query" [(ngModel)]="autocomplete.query" (input)="updateSearch()" #query="ngModel" required></ion-input>
+             
+            </div>
+             <ion-item *ngFor="let item of autocompleteItems" (click)="choose(item)">{{ item.description }} </ion-item>
+        </ion-col>
+          
+        <ion-col col-2>
+        <button ion-button (click)="chooseItem(heroForm)" type="submit" end class="search" >
+        <img src="assets/imgs/search.png"/>
+      </button>
+      
+    </ion-col>
+   
+  </ion-row>
+</ion-grid>
+</form>
+<div class="wrt_lft">
+    <h2>{{searchlocation}}</h2>
+</div>
+
+     <!--<div class="srchbox">
+     <div class="imgbox imgset"><img src="assets/imgs/search2.png"/></div>
+     <div class="inputbox"><input type="text" name="" placeholder="Search For Services"></div>
+    </div>-->
+
+    <form #heroForm="ngForm" novalidate class="signup_form"> 
+
+    <ion-input class="txtbx" required placeholder="Enter distance in km" name="Search" [(ngModel)]="data.Search" type="text" id="number" required minlength="6" ></ion-input>
+    
+     
+   <ion-select  [(ngModel)]="data.servicecat" name="servicecat" id="servicecat" required placeholder="Service Category" #servicecat="ngModel">
+      <ion-option *ngFor="let name of cats" value="{{name.Category.id}}">{{name.Category.name}}</ion-option>
+   </ion-select>
+  
+   <ion-select [(ngModel)]="data.service" name="service" id="service" required placeholder="Type of service provider"  #service="ngModel">
+      <ion-option> Individual  </ion-option>
+      <ion-option> Company </ion-option>
+      <ion-option> Both Individual Freelancer and Company </ion-option>
+   </ion-select>
+
+     <!-- </form>  -->
+     <button ion-button block round class="current btns" (click)=	servicesbycategory(heroForm) type="submit" >SEARCH</button>
+   
+    </form>
+   </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <div class="servicesbx">
+    <h1>All Services</h1>
+    <img (click)="allservices()" src="assets/imgs/services.jpg"/>
+  </div>
+
+  <div class="repairsbx" *ngFor="let cat of cats">
+  
+  <h1>{{cat.Category.name}}</h1>
+  <span (click)="seeservice(cat.Category.id)">See All</span>
+
+  <ion-scroll scrollX="true" scrollY="true">
+
+        <ion-card *ngFor="let catsub of cat.Category.SubCategory">
+            <ion-card-content (click)="aboutservice(catsub.id,cat.Category.id)">
+                <img src="{{catsub.image}}"/>
+                 <h1 >{{catsub.name}}</h1>
+            </ion-card-content>
+        </ion-card>
+    </ion-scroll>
+
+  </div>
+  
+  <!-- <div class="repairsbx" *ngFor="let cat of catsss">
+    
+    <h1>{{cat.Category.name}}</h1>
+    <span (click)="seeservice(cat.Category.id)">See All</span>
+  
+    <ion-scroll scrollX="true" scrollY="true">
+  
+          <ion-card *ngFor="let catsub of cat.Category.SubCategory">
+              <ion-card-content (click)="aboutservice(catsub.id,cat.Category.id)">
+                  <img src="{{catsub.image}}"/>
+                   <h1 >{{catsub.name}}</h1>
+              </ion-card-content>
+          </ion-card>
+      </ion-scroll>
+  
+    </div> -->
+
+
+</ion-content>

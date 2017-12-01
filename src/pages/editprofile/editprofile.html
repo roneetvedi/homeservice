@@ -1,0 +1,80 @@
+<!--
+  Generated template for the EditprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button  class="backbtn" (click)="back()" float-left>
+          <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>
+    <ion-title>EDIT PROFILE </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="edtbox">
+<div class="edtprfl">
+    <img *ngIf="this.prfimage == '' || this.prfimage == undefined"  class="log" src="assets/imgs/no-user-image.gif"/>
+    <img *ngIf="this.prfimage != ''" class="log" [src]="this.prfimage"/></div>
+  <ion-icon class="cam" name="camera" (click)="openActionSheet()"></ion-icon>
+</div>
+
+
+
+  
+<form #heroForm="ngForm"novalidate class="profilebox">
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input  [(ngModel)]="data.firstname" name="firstname" type="text" id="firstname" required #firstname="ngModel"></ion-input>
+
+    <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+    <div [hidden]="!firstname.errors.required" class="alert alert-danger">
+      First name is required
+    </div>
+    </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input  [(ngModel)]="data.lastname" name="lastname" type="text" id="lastname" required #lastname="ngModel"></ion-input>
+
+    <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+    <div [hidden]="!lastname.errors.required" class="alert alert-danger">
+      Last name is required
+    </div>
+    </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Email Id</ion-label>
+    <ion-input  [(ngModel)]="data.email" name="email" type="email" id="email" #email="ngModel" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Phone Number</ion-label>
+    <ion-input  [(ngModel)]="data.phonenumber" name="phonenumber" type="text" id="phonenumber" maxlength="12" required pattern='[0-9]*' #phonenumber="ngModel"></ion-input>
+
+    <div *ngIf="phonenumber.errors && (phonenumber.dirty || phonenumber.touched)" class="alert alert-danger">
+    <div [hidden]="!phonenumber.errors.required" class="alert alert-danger">
+      Phone number is required
+      </div>
+      <div [hidden]="!phonenumber.errors.pattern" class="alert alert-danger">
+      In-valid phone number
+      </div>
+    </div>
+  </ion-item>
+
+  
+
+</ion-list>
+</form>
+
+<button ion-button block round type="submit" color="theme" [disabled]="!heroForm.form.valid" (click)="editinfo(heroForm)">SUBMIT</button>
+</ion-content>

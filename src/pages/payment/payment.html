@@ -1,0 +1,63 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PAYMENT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+<form #heroForm="ngForm"novalidate class="payment">
+<ion-list>
+<h1 >Pay With Card</h1>
+  <ion-item>
+    <ion-label floating>Card Number</ion-label>
+    <ion-input  [(ngModel)]="data.card" class="txtbx" name="card" type="text" id="card" required pattern='[0-9]*' #card="ngModel"></ion-input>
+
+		<div *ngIf="card.errors && (card.dirty || card.touched)" class="alert alert-danger">
+		   <div [hidden]="!card.errors.required" class="alert alert-danger">
+			 Card number is required
+			</div>
+			<div [hidden]="!card.errors.pattern" class="alert alert-danger">
+			 In-valid card number
+			</div>
+		</div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>CVV</ion-label>
+    <ion-input  [(ngModel)]="data.cvv" class="txtbx" name="cvv" type="text" id="cvv" required pattern='[0-9]*' #cvv="ngModel"></ion-input>
+
+		<div *ngIf="cvv.errors && (cvv.dirty || cvv.touched)" class="alert alert-danger">
+		   <div [hidden]="!cvv.errors.required" class="alert alert-danger">
+			 CVV is required
+			</div>
+			<div [hidden]="!cvv.errors.pattern" class="alert alert-danger">
+			 In-valid CVV
+			</div>
+		</div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Expiry Date</ion-label>
+    <ion-datetime displayFormat="MM-YYYY" [(ngModel)]="exyear"  min="{{cyear}}" max="{{fyear}}" name="exyear" id="exyear"></ion-datetime>
+  </ion-item>
+
+  
+
+</ion-list>
+<button ion-button block round color="theme" [disabled]="!heroForm.form.valid" (click)="pay(heroForm)">Pay</button>
+</form>
+
+
+
+</ion-content>

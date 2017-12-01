@@ -1,0 +1,151 @@
+<ion-content>
+	<ion-slides pager>
+		<ion-slide>
+			<img src="assets/imgs/slide-one.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-two.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-three.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-four.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+		<ion-slide>
+			<img src="assets/imgs/slide-five.jpg" alt="" >
+		</ion-slide><!-- First Slide End Here -->
+	</ion-slides><!-- Slide End Here -->
+	<div class="page-bottom" padding>
+		<div class="page-head">
+			<h2>Sign Up</h2>
+		</div>
+		<div class="form-sec">
+			<form #heroForm="ngForm"novalidate class="signup_form">
+				<ion-list>
+					<ion-item>
+						<ion-label floating>First Name</ion-label>
+						<ion-input  [(ngModel)]="data.firstname" name="firstname" type="text" id="firstname" required #firstname="ngModel"></ion-input>
+
+						<div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+						<div [hidden]="!firstname.errors.required" class="alert alert-danger">
+							First name is required
+						</div>
+						</div>
+					</ion-item>
+					
+					<ion-item>
+						<ion-label floating>Last Name</ion-label>
+						<ion-input  [(ngModel)]="data.lastname" name="lastname" type="text" id="lastname" required #lastname="ngModel"></ion-input>
+
+						<div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+						<div [hidden]="!lastname.errors.required" class="alert alert-danger">
+							Last name is required
+						</div>
+						</div>
+					</ion-item>
+					
+					<ion-item>
+						<ion-label floating>Email</ion-label>
+						<ion-input  [(ngModel)]="data.email" name="email" type="email" id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$' #email="ngModel"></ion-input>
+    
+						<div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+						<div [hidden]="!email.errors.required" class="alert alert-danger">
+							Email is required
+							</div>
+							<div [hidden]="!email.errors.pattern" class="alert alert-danger">
+							In-valid email
+							</div>
+						</div>
+					</ion-item>
+					
+					<ion-item>
+						<ion-label floating>Phone</ion-label>
+						<ion-input  [(ngModel)]="data.phone" name="phone" type="text" id="phone" maxlength="12" required pattern='[0-9]*' #phone="ngModel"></ion-input>
+  
+						<div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert alert-danger">
+						<div [hidden]="!phone.errors.required" class="alert alert-danger">
+							Phone number is required
+							</div>
+							<div [hidden]="!phone.errors.pattern" class="alert alert-danger">
+							In-valid phone number
+							</div>
+						</div>
+					</ion-item>
+
+					<ion-item>
+						<ion-label floating>Country</ion-label>
+						<ion-select [(ngModel)]="data.country" name="country" id="country" required  #country="ngModel">
+						<ion-option *ngFor="let name of countries" value="{{name.Country.country_name}}">{{name.Country.country_name}}</ion-option>
+						</ion-select>
+					
+						<div *ngIf="country.errors && (country.dirty || country.touched)" class="alert alert-danger">
+						<div [hidden]="!country.errors.required" class="alert alert-danger">
+							Country is required
+						</div>
+						</div>
+					</ion-item>
+
+
+					<ion-item>
+						<ion-label floating>Postal Code</ion-label>
+						<ion-input  [(ngModel)]="data.postal" name="postal" type="text" id="postal" required #postal="ngModel"></ion-input>
+						<div *ngIf="postal.errors && (postal.dirty || postal.touched)" class="alert alert-danger">
+						<div [hidden]="!postal.errors.required" class="alert alert-danger">
+							Postal code is required
+						</div>
+						</div>
+					</ion-item>
+
+					<ion-item>
+						<ion-label floating>Address</ion-label>
+						<ion-input  [(ngModel)]="data.address" name="address" type="text" id="address" required #address="ngModel"></ion-input>
+   
+						<div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+						<div [hidden]="!address.errors.required" class="alert alert-danger">
+							Address is required
+						</div>
+						</div>
+					</ion-item>
+
+					<ion-item>
+						<ion-label floating>Password</ion-label>
+						<ion-input  [(ngModel)]="data.password" name="password" type="password" id="password" required minlength="6" maxlength="50"  #password="ngModel"></ion-input>
+    
+						<div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+						<div [hidden]="!password.errors.required" class="alert alert-danger">
+							Password is required
+							</div>
+					    <div [hidden]="!password.errors.minlength" class="alert alert-danger">
+							Minimum length should be 6
+							</div>
+						</div>
+					</ion-item>
+					
+					<ion-item>
+						<ion-label floating>Confirm Password</ion-label>
+						<ion-input  [(ngModel)]="data.cpassword" name="cpassword" placeholder="Confirm Password" type="password" id="cpassword" validateEqual="password" required #cpassword="ngModel"></ion-input>
+    
+						<div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)" class="alert alert-danger">
+						<div [hidden]="!cpassword.errors.required" class="alert alert-danger">
+							Confirm password is required
+							</div>
+						</div>
+					</ion-item>
+					<ion-item>
+						<button ion-button (click)="to_signin()">Sign In</button>
+						
+					</ion-item>
+				</ion-list>
+				<button ion-button block type="submit" color="theme" [disabled]="!heroForm.form.valid" (click)="signUp(heroForm)">Sign Up</button>
+			</form>
+		</div>
+		<div class="bottom-sec">
+			<h5><span>Or Sign In With</span></h5>
+			<div class="button-sec">
+				<button ion-button (click)="facebookLogin()"><ion-icon name="logo-facebook"></ion-icon> Facebook</button>
+				<button ion-button (click)="google_plus()"><ion-icon name="logo-googleplus"></ion-icon> Google</button>
+			</div>
+		</div>
+	</div>
+</ion-content>

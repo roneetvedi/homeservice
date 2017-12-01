@@ -1,0 +1,55 @@
+<!--
+  Generated template for the AddressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title >ADDRESS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<div class="textbx">
+		<h1>Area of Service,</h1>
+		<p>{{location}}</p>
+		<h1>Address of Service</h1>
+
+	</div>
+
+
+<form #heroForm="ngForm"novalidate class="inputbox">
+<ion-list>
+  <ion-item>
+    <ion-label floating>Address</ion-label>
+    <ion-input  [(ngModel)]="data.address" name="address" type="text" id="address" required #address="ngModel"></ion-input>
+
+    <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+    <div [hidden]="!address.errors.required" class="alert alert-danger">
+      Address is required
+    </div>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Landmark(optional)</ion-label>
+    <ion-input  [(ngModel)]="data.landmark" name="landmark" type="text" id="landmark" #landmark="ngModel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Project Name(Home, House, etc)</ion-label>
+    <ion-input  [(ngModel)]="data.optionalname" name="optionalname" type="text" id="optionalname" required #optionalname="ngModel"></ion-input>
+
+    <div *ngIf="optionalname.errors && (optionalname.dirty || optionalname.touched)" class="alert alert-danger">
+    <div [hidden]="!optionalname.errors.required" class="alert alert-danger">
+      Project name is required
+    </div>
+    </div>
+  </ion-item>
+</ion-list>
+<button ion-button block round type="submit" color="theme" [disabled]="!heroForm.form.valid" (click)="useraddress(heroForm)">NEXT</button>
+</form>
+</ion-content>
